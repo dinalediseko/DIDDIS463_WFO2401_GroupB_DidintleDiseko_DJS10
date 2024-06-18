@@ -1,6 +1,6 @@
 // src/components/BlogPosts.js
 import React, { useEffect, useState } from 'react';
-import './BlogPosts.css'; // Import CSS file for styling
+import './BlogPosts.css';
 
 const BlogPosts = () => {
   const [posts, setPosts] = useState([]);
@@ -10,8 +10,7 @@ const BlogPosts = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        // Intentionally breaking the URL to simulate an error
-        const response = await fetch('https://jsonplaceholder.typiciode.com/poosts');
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -28,12 +27,12 @@ const BlogPosts = () => {
   }, []);
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
+  if (error) return <p>Data Fetching Failed</p>;
 
   return (
     <div className="blog-posts">
       <h1>Blog Posts</h1>
-      <ul>
+      <ol>
         {posts.slice(0, 10).map((post, index) => (
           <li key={post.id} className="blog-post">
             <h2 className="post-title">
@@ -43,10 +42,11 @@ const BlogPosts = () => {
             <p className="post-body">{post.body}</p>
           </li>
         ))}
-      </ul>
+      </ol>
     </div>
   );
 };
 
 export default BlogPosts;
+
 
