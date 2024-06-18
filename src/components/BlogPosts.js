@@ -31,7 +31,7 @@ const BlogPosts = () => {
 
   return (
     <div className="blog-posts">
-      <h1>Blog Posts</h1>
+      <h1>Posts</h1>
       <ol>
         {posts.slice(0, 10).map((post, index) => (
           <li key={post.id} className="blog-post">
