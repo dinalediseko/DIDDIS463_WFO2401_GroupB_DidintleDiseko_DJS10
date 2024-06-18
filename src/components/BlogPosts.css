@@ -1,0 +1,41 @@
+/* src/components/BlogPosts.css */
+.blog-posts {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+.blog-post {
+  margin: 20px 0;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.post-number {
+  font-weight: bold;
+  color: #333;
+  font-size: 1.5em;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.post-title {
+  margin: 40px 0 10px 0;
+}
+
+.post-body {
+  margin: 10px 0 0 0;
+}
